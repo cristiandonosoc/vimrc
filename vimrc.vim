@@ -219,16 +219,21 @@ set writebackup
 "                 so we can undo between instances of vim
 set swapfile
 
-" Where to put swap, backup and undo files
+let swapfolder = 0
 if isdirectory(expand('~/.vim/cache'))
-  if &directory =~# '^\.,'
-    set directory^=~/.vim/cache/swap
-  endif
-  if &backupdir =~# '^\.,'
-    set backupdir^=~/.vim/cache/backup
-  endif
-  if exists('+undodir') && &undodir =~# '^\.\%(,\|$\)'
-    set undodir^=~/.vim/cache/undo
+  let swapfolder = '~/.vim/cache'
+endif
+
+if isdirectory(expand('~/vimfiles/cache'))
+  let swapfolder = '~/vimfiles/cache'
+endif
+
+" Where to put swap, backup and undo files
+if isdirectory(expand(swapfolder))
+  let &directory=expand(swapfolder.'/swap')
+  let &backupdir=expand(swapfolder.'/backup')
+  if exists('+undodir')
+    let &undodir=expand(swapfolder.'/undo')
   endif
 endif
 if exists('+undofile')
