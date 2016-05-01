@@ -176,13 +176,13 @@ endif
 " Solarized color scheme enable (put solarized.vim in .vim/colors)
 set background=dark
 try
-    colorscheme solarized
+  colorscheme solarized
 catch
-    colorscheme desert
+  colorcheme desert
 endtry
 
 " Set utf8 as standard encoding and en_US as the standard language
-set encoding=utf8
+" set encoding=utf8
 
 " Use Unix as the standard file type
 set fileformats=unix,dos,mac
