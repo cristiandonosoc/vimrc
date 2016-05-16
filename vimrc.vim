@@ -31,6 +31,12 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Enable to run other .vimrc in project folder
+set exrc
+" Displble :autocmd and write from the specfic .vimrc (unless owned by me)
+set secure
+
 set nocompatible
 
 " Sets how many lines of history VIM has to remember
@@ -66,6 +72,11 @@ set viminfo^=!                              " Save uppercase variables
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+try
+  set mouse=a
+catch
+endtry
 
 " Set 7 lines to the cursor - when moving vertically using j/k
 " This options will always try to keep this amount of lines over and below the cursor
@@ -178,7 +189,7 @@ set background=dark
 try
   colorscheme solarized
 catch
-  colorcheme desert
+  colorscheme desert
 endtry
 
 " Set utf8 as standard encoding and en_US as the standard language
@@ -203,7 +214,6 @@ set fileformat=unix
 " space opens/closes folds
 "nnoremap <space> za
 "set foldmethod=indent       " Vim folds on indentation
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
@@ -392,13 +402,13 @@ if has("mac") || has("macunix")
   vmap <D-k> <A-k>
 endif
 
-" Delete trailing white space on save, useful for Python and CoffeeScript ;)
-func! DeleteTrailingWS()
-  exe "normal mz"
-  %s/\s\+$//ge
-  exe "normal `z"
-endfunc
-autocmd BufWrite * :call DeleteTrailingWS()
+" " Delete trailing white space on save, useful for Python and CoffeeScript ;)
+" func! DeleteTrailingWS()
+"   exe "normal mz"
+"   %s/\s\+$//ge
+"   exe "normal `z"
+" endfunc
+" autocmd BufWrite * :call DeleteTrailingWS()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Ack searching and cope displaying
@@ -530,20 +540,3 @@ endfunction
 "     execute("bdelete! ".l:currentBufNum)
 "   endif
 "endfunction
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Plugins
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" We execute pathogen to load the plugins
-try
-  execute pathogen#infect()
-catch
-endtry
-
-" Recommended plugins
-" - nerdtree: *Much* better directory traversing
-" - supertab: easy out-of-the-box autocomplete
-" - tcomment: commenting/uncommenting
-" - vim-airline: cooler status bar
-
