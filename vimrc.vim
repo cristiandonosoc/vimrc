@@ -184,14 +184,6 @@ else
   set term=xterm-256color
 endif
 
-" Solarized color scheme enable (put solarized.vim in .vim/colors)
-set background=dark
-try
-  colorscheme solarized
-catch
-  colorscheme desert
-endtry
-
 " Set utf8 as standard encoding and en_US as the standard language
 " set encoding=utf8
 

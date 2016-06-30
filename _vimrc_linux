@@ -1,2 +1,10 @@
 so ~/vimrc/vimrc.vim
-so ~/vimrc/vundle_linux
+so ~/.vim/vundle_list.vim
+
+" Solarized color scheme enable (put solarized.vim in .vim/colors)
+set background=dark
+try
+  colorscheme solarized
+catch
+  colorscheme desert
+endtry
