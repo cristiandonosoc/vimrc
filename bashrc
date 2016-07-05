@@ -6,7 +6,7 @@ bind '"\e[B": history-search-forward'
 stty -ixon
 
 # Nice prompt
-export PS1="\n\[\e[32;1m\](\[\e[37;1m\]\t\[\e[32;1m\])-(\[\e[37;1m\]\u@\H\[\e[32;1m\])-(\[\e[37;1m\]jobs:\j\[\e[32;1m\])-(\[\e[37;1m\]\w\[\e[32;1m\])\n(\[\[\e[37;1m\]!\!\[\e[32;1m\])-> \[\e[0m\]"
+export PS1="\n\[\e[32;1m\](\[\e[37;1m\]\t\[\e[32;1m\])-(\[\e[37;1m\]\u@\H\[\e[32;1m\])-(\[\e[37;1m\]jobs:\j\[\e[32;1m\])-(\[\e[37;1m\]\w\[\e[32;1m\])\n(\[\e[37;1m\]!\!\[\e[32;1m\])-> \[\e[0m\]"
 
 # Some nice aliases
 alias ls="ls --color -F"
@@ -25,6 +25,8 @@ function cd {
 # case insensitive paths
 shopt -s nocaseglob
 
+# Nice tmux colors
+export TERM="xterm-256color"
 
 if [ -f $HOME/.dir_colors ] 
 then
