@@ -8,3 +8,5 @@ try
 catch
   colorscheme desert
 endtry
+
+let g:scratch_autohide = 1

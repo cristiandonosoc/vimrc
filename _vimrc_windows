@@ -1,2 +1,12 @@
 so ~/vimrc/vimrc.vim
 so ~/vimfiles/vundle_list.vim
+
+" Solarized color scheme enable (put solarized.vim in .vim/colors)
+set background=dark
+try
+  colorscheme solarized
+catch
+  colorscheme desert
+endtry
+
+let g:scratch_autohide = 1
