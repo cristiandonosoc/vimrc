@@ -14,5 +14,7 @@ Plugin 'tpope/vim-commentary'
 Plugin 'Valloric/YouCompleteMe'
 " Text-templates
 Plugin 'aperezdc/vim-template'
+" Typescript
+Plugin 'leafgarland/typescript-vim'
 
 call vundle#end()
