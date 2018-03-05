@@ -1,0 +1,16 @@
+/******************************************************************************
+ * @file: %FFILE%
+ * @author: %NAME%
+ * @email: %MAIL%
+ * @date: %DATE%
+ * @license: %MY_LICENSE%
+ *
+ * @description: TODO(%USER%): Add description
+ ******************************************************************************/
+
+#ifndef %HEADER_GUARD%
+#define %HEADER_GUARD%
+
+%HERE%
+
+#endif  // %HEADER_GUARD%

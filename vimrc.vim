@@ -39,6 +39,10 @@ set secure
 
 set nocompatible
 
+" Most annoying mistake ever
+cnoreabbrev W w
+cnoreabbrev Wa wa
+
 " Sets how many lines of history VIM has to remember
 set history=700
 

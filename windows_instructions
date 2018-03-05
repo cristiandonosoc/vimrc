@@ -1,0 +1,24 @@
+REM Create vim helper dirs
+REM mkdir ~/vimfiles/cache/swap
+REM mkdir ~/vimfiles/cache/backup
+REM mkdir ~/vimfiles/cache/undo
+
+REM mkdir ~/vimfiles/templates
+REM copy all of the template files into ~/vimfiles/templates
+
+REM Check for python version. Right now we depend on 3.5+
+
+REM Download vundle
+REM git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+REM Load vimrc's
+REM ln -s ~/vimrc/_vimrc_linux ~/.vimrc
+REM ln -s ~/vimrc/vundle_linux.vim ~/.vim/vundle_list.vim
+
+REM For YouCompleteMe
+REM Read Windows install instructions
+REM Remember to modify the CMake target if needed
+REM Go to ~/vimfiles/bundle/YouCompleteMe
+REM run ./install.py --clang-completer
+
+REM In vim, run :VundleInstall
