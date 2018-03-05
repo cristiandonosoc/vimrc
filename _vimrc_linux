@@ -11,3 +11,5 @@ endtry
 
 " YouCompleteMe
 let g:ycm_confirm_extra_conf=0
+
+source ~/.vim/templates.vim
