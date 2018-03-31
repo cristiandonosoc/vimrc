@@ -50,6 +50,7 @@ filetype on
 filetype plugin on
 " Automatic filetype indenting
 filetype indent on
+syntax on
 
 " Set to auto read when a file is changed from the outside
 set autoread
@@ -394,13 +395,13 @@ if has("mac") || has("macunix")
   vmap <D-k> <A-k>
 endif
 
-" " Delete trailing white space on save, useful for Python and CoffeeScript ;)
-" func! DeleteTrailingWS()
-"   exe "normal mz"
-"   %s/\s\+$//ge
-"   exe "normal `z"
-" endfunc
-" autocmd BufWrite * :call DeleteTrailingWS()
+" Delete trailing white space on save, useful for Python and CoffeeScript ;)
+func! DeleteTrailingWS()
+  exe "normal mz"
+  %s/\s\+$//ge
+  exe "normal `z"
+endfunc
+autocmd BufWrite * :call DeleteTrailingWS()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Ack searching and cope displaying

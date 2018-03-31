@@ -28,7 +28,9 @@ shopt -s nocaseglob
 # Nice tmux colors
 export TERM="xterm-256color"
 
-if [ -f $HOME/.dir_colors ] 
+if [ -f $HOME/.dir_colors ]
 then
   eval `dircolors -b $HOME/.dir_colors`
 fi
+
+export SDL2=/usr/include/SDL2
