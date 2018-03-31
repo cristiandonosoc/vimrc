@@ -9,4 +9,5 @@ catch
   colorscheme desert
 endtry
 
-let g:scratch_autohide = 1
+" YouCompleteMe
+let g:ycm_confirm_extra_conf=0

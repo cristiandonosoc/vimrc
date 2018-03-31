@@ -33,4 +33,4 @@ then
   eval `dircolors -b $HOME/.dir_colors`
 fi
 
-export SDL2=/usr/include/SDL2
+export PATH="~/Local/bin;$PATH"

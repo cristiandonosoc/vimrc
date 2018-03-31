@@ -16,7 +16,9 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'mtth/scratch.vim'
 " OpenGL syntax
 Plugin 'tikhomirov/vim-glsl'
-" TypeScript
+" Text-templates
+Plugin 'aperezdc/vim-template'
+" Typescript
 Plugin 'leafgarland/typescript-vim'
 
 call vundle#end()

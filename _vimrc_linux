@@ -6,8 +6,12 @@ set background=dark
 try
   colorscheme solarized
 catch
-  colorscheme desert
+  colorscheme torte
 endtry
 
 let g:scratch_autohide = 1
 let g:ycm_confirm_extra_conf = 0
+" YouCompleteMe
+let g:ycm_confirm_extra_conf=0
+
+source ~/.vim/templates.vim
